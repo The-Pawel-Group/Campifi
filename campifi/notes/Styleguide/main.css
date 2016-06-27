@@ -1,0 +1,91 @@
+div {
+  height: 50px;
+  width: 50px;
+}
+
+.maincolor {
+  background-color: hsl(22,49%,43%);
+}
+
+.secondcolor {
+  background-color: hsl(19,100%,19%);
+}
+
+.thirdcolor {
+  background-color: hsl(105,32%,53%);
+}
+
+.whitecolor, html {
+  background-color: hsl(43,91%,96%);
+}
+
+.blackcolor {
+  background-color: hsl(0,4%,13%);
+}
+
+.h1, h1 {
+  font-size: 3rem;
+  font-family: 'Boogaloo', sans-serif;
+}
+
+.h2, h2 {
+  font-size: 2.5rem;
+  font-family: 'Boogaloo', sans-serif;
+}
+
+.h3, h3 {
+  font-size: 2rem;
+  font-family: 'Boogaloo', sans-serif;
+}
+
+p, li {
+  font-size: 1.1rem;
+  font-family: 'Roboto', serif;
+}
+
+
+
+ol {
+  list-style: lower-alpha;
+  padding-left: 20px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+button {
+  padding: .5%;
+  border-radius: 20%;
+  background-color: hsl(22,49%,43%);
+  color: hsl(105,32%,53%);
+  font-weight: 900;
+  font-family:'Roboto', serif;
+  border: 1px solid hsl(19,100%,19%);
+}
+
+.medium {
+  font-size: 1.75rem;
+}
+
+.large {
+  font-size: 2.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
