@@ -4,8 +4,8 @@ exports.up = function(knex, Promise) {
     table.increments();
     table.string('name');
     table.string('image');
-    table.integer('longitude');
-    table.integer('latitude');
+    table.string('longitude');
+    table.string('latitude');
     table.string('description');
     table.integer('camper_id').references('camper.id').onDelete('CASCADE');
   });
