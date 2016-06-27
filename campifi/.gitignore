@@ -38,6 +38,3 @@ jspm_packages
 
 #Environment Variables
 .env
-
-#Notes Folder
-notes
