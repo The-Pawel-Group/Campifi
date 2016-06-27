@@ -1,6 +1,16 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url(http://haileyidaho.com/wp-content/uploads/2015/01/Stanley-lake-camping-Credit-Carol-Waller-2011.jpg);
+  background-size: cover;
+}
+.landingTextBG {
+  width: 15rem;
+  height: auto;
+  border: 1px solid hsla(60, 100%, 98%, 1);
+  				border-radius: 6px;
+          box-shadow: 0px 0px 3px 3px #FCEBBF 10%;
+          background: -webkit-radial-gradient( circle, #FCEBBF 10%, #75AF63 80%);
 }
 
 a {
