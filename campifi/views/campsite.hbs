@@ -1,8 +1,32 @@
-{{#each site}}
-<h3>{{name}}</h3>
-<img src={{image}}>
-<p>{{description}}</p>
-<a href="/campsite/edit/{{this.id}}">EDIT</a>
-<a href="/campsite/delete/{{this.id}}">DELETE</a>
+    <h3>{{site.name}}</h3>
+    <img src= {{site.image}}>
+    <p>{{site.description}}</p>
+    <a href="/campsite/edit/{{site.id}}">EDIT</a>
+    <a href="/campsite/delete/{{site.id}}">DELETE</a>
 
+
+{{#each comment}}
+    <p>{{this.message}}</p>
 {{/each}}
+
+<form class="" action="/campsite/comment/{{site.id}}" method="post">
+    <div class="row">
+        <div class="medium-6 medium-centered columns">
+            <label for="message" class='text-center'>Comment:
+                <textarea name="message" rows="8" cols="40" placeholder="Comment Here!">
+                </textarea>
+            </label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="medium-6 medium-centered columns">
+            <label for="camper_id" class='text-center'> camper_id:
+                <input type="number" name="camper_id" placeholder="camper_id">
+            </label>
+        </div>
+          <input type="hidden" name="site_id" value="{{site.id}}">
+    </div>
+    <div class="medium-6 text-center columns">
+      <button type="submit">Post Comment</button>
+    </div>
+</form>
