@@ -1,15 +1,15 @@
 body {
-  padding: 50px;
   background-color: hsl(105,32%,53%);
 }
+/*lighter brown*/
 .maincolor {
   background-color: hsl(22,49%,43%);
 }
-
+/*darker brown*/
 .secondcolor {
   background-color: hsl(19,100%,19%);
 }
-
+/*green*/
 .thirdcolor {
   background-color: hsl(105,32%,53%);
 }
@@ -60,13 +60,13 @@ button {
   font-family:'Roboto', serif;
   border: 1px solid hsl(19,100%,19%);
 }
+
 .landingTextBG {
-  width: 15rem;
+  width: 35rem;
   height: auto;
-  border: 1px solid hsla(60, 100%, 98%, 1);
-  				border-radius: 6px;
-          box-shadow: 0px 0px 3px 3px #FCEBBF 10%;
-          background: -webkit-radial-gradient( circle, #FCEBBF 10%, #75AF63 80%);
+	border-radius: 6px;
+  box-shadow: 0px 0px 3px 3px #FCEBBF 10%;
+  background: -webkit-radial-gradient( circle, #FCEBBF 10%, #75AF63 80%);
 }
 
 a {
@@ -76,4 +76,88 @@ a {
 .container {
   max-width: 600px;
   margin: 0 auto;
+}
+/*            LANDING PAGE             */
+
+.video iframe {
+  position: absolute;
+  height: 40vh; !important
+}
+.content1 {
+  position: absolute;
+  width: 60%;
+  margin-left: 20vw;
+  margin-top: -95vh;
+  background: -webkit-radial-gradient( circle, #FCEBBF 10%, rgba(117, 175, 99, 0.7) 80%);
+  border-radius: 6px;
+}
+.content1 h1 {
+  color: hsl(19,100%,19%);
+  font-size: 10rem;
+}
+
+.content {
+  position: absolute;
+  margin-left: 30vw;
+  margin-top: -60vh;
+}
+.content p {
+  font-size: 2rem;
+  font-family: 'Roboto', serif;
+  color: hsl(19,100%,19%);
+}
+.logSign {
+  margin-top: 25vh;
+  width: 10vw;
+  border-radius: 6px;
+  font-family: 'Roboto', serif;
+  font-size: 1.5rem;
+
+}
+.log2 {
+  margin-left: 8vw;
+}
+.button.success {
+  color: hsl(19,100%,19%);
+}
+.campsiteImage {
+ height: 40vh;
+ width: 100vw;
+}
+
+.center {
+ display:flex;
+ flex-wrap: wrap;
+}
+
+/*                MEDIA QUERIES                */
+
+@media (max-width: 480px) {
+  body {
+    background-image: url('http://cdn4.benzinga.com/files/imagecache/1024x768xUP/images/story/2012/shutterstock_132468212.jpg');
+  }
+  .content1 {
+    margin-left: 20vw;
+    margin-top: -10vh;
+  }
+  .content1 h1 {
+    font-size: 2rem;
+  }
+  .content {
+    width: 80%;
+    margin: auto;
+    margin-left: 10vw;
+    padding-left: -20px;
+  }
+  .content p {
+    font-size: 1rem;
+    padding-top: 2vh;
+  }
+  iframe {
+    display: none;
+  }
+  .logSign {
+    width: 25vw;
+    font-size: 1rem;
+  }
 }
