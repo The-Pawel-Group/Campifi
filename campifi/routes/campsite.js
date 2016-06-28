@@ -5,7 +5,7 @@ var db = require('../db/api');
 var auth = require('../auth');
 
 // Render sites //
-router.get('/:id', function(req, res, next) {
+router.get('/:id', auth.isNotLoggedIn, function(req, res, next) {
     return Promise.all([
         knex('site').select().where('site.id', req.params.id).first(),
         knex('comment').select().where('site_id', req.params.id)

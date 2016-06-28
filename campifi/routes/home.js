@@ -4,7 +4,7 @@ var knex = require('../db/knex');
 var db = require('../db/api');
 var auth = require('../auth');
 
-router.get('/', function(req, res, next) {
+router.get('/', auth.isNotLoggedIn, function(req, res, next) {
   return Promise.all([
   knex('site').select(),
   knex('camper').select()
