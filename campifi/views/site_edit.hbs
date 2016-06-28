@@ -1,0 +1,62 @@
+<div class="row">
+    <div class="small-6 small-centered columns">
+        <h1 class='text-center'> Edit {{site.name}}</h1>
+    </div>
+</div>
+
+<form action="/campsite/edit/{{site.id}}" method="post">
+    <div class="row">
+        <div class="medium-6 medium-centered columns">
+            <label for="name" class='text-center'> Campsite Name:
+                <input type="text" name="name" placeholder="campsite" value='{{site.name}}'>
+            </label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="medium-6 medium-centered columns">
+            <label for="image" class='text-center'> Image URL:
+                <input type="url" name="image" placeholder="image URL" value='{{site.image}}'>
+            </label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="medium-6 medium-centered columns">
+            <label for="longitude" class='text-center'> Longitude:
+                <input type="text" name="longitude" placeholder="longitude" value='{{site.longitude}}'>
+            </label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="medium-6 medium-centered columns">
+            <label for="latitude" class='text-center'> Latitude:
+                <input type="text" name="latitude" placeholder="latitude" value='{{site.latitude}}'>
+            </label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="medium-6 medium-centered columns">
+            <label for="description" class='text-center'> Description:
+                <textarea cols="5" name="description" placeholder="describe the campsite" value='{{site.description}}'>{{site.description}}</textarea>
+            </label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="medium-6 medium-centered columns">
+                <input type="hidden" name="camper_id" value='{{site.camper_id}}'>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="small-6 large-6 small-centered large-centered text-center columns">
+            <button class='success button' type="submit">Submit</button>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="small-6 large-6 small-centered large-centered text-center columns">
+            <a href="/home"></a>
+            <button class='success button' type="link">Back</button>
+            </a>
+        </div>
+    </div>
+</form>
