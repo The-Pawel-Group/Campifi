@@ -129,6 +129,17 @@ a {
  display:flex;
  flex-wrap: wrap;
 }
+.navIcon {
+  list-style-type: none;
+  font-size: 3rem;
+  color: hsl(0,4%,13%);
+}
+.navIcon a{
+  font-size: 1.5rem;
+  color: hsl(0,4%,13%);
+}
+.top-bar-section ul {display: table; margin: 0 auto;}
+.top-bar-section ul li {display: table-cell;}
 
 /*                MEDIA QUERIES                */
 
