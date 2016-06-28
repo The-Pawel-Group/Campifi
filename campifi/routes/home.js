@@ -6,11 +6,12 @@ var auth = require('../auth');
 
 router.get('/', function(req, res, next) {
   return Promise.all([
-  knex('site').select()
+  knex('site').select(),
+  knex('camper').select()
 ])
   .then(function(data) {
     console.log(data);
-    res.render('home', {site: data[0]});
+    res.render('home', {site: data[0], camper: data[1]});
   });
 });
 
