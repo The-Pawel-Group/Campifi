@@ -30,5 +30,12 @@ module.exports = {
     } else {
       next();
     }
+  },
+  isNotLoggedIn: function(req, res, next) {
+    if (!req.session.camperId) {
+      res.redirect('/login');
+    } else {
+      next();
+    }
   }
 };
