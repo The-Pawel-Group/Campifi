@@ -1,0 +1,62 @@
+<div class="row">
+  <div class="small-6 small-centered columns">
+    <h1 class='text-center'> Add a CampSite </h1>
+  </div>
+</div>
+
+<form action="/site_add" method="post">
+  <div class="row">
+    <div class="medium-6 medium-centered columns">
+      <label for="name" class='text-center'> Campsite Name:
+        <input type="text" name="name" placeholder="campsite">
+      </label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="medium-6 medium-centered columns">
+      <label for="image" class='text-center'> Image URL:
+        <input type="url" name="image" placeholder="image URL">
+      </label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="medium-6 medium-centered columns">
+      <label for="longitude" class='text-center'> Longiture:
+        <input type="text" name="longitude" placeholder="longitude">
+      </label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="medium-6 medium-centered columns">
+      <label for="latitude" class='text-center'> Latitude:
+        <input type="text" name="latitude" placeholder="latitude">
+      </label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="medium-6 medium-centered columns">
+      <label for="description" class='text-center'> Description:
+        <textarea cols="5" name="description" placeholder="describe the campsite"></textarea>
+      </label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="medium-6 medium-centered columns">
+      <label for="camper_id" class='text-center'> Camper Id:
+          <input type="number" name="camper_id">
+      </label>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="small-6 large-6 small-centered large-centered text-center columns">
+      <button class='success button' type="submit">Submit</button>
+    </div>
+
+  </div>
+<div class="row">
+  <div class="small-6 large-6 small-centered large-centered text-center columns">
+    <a href="/"></a><button class='success button' type="link">Back</button></a>
+  </div>
+</div>
+</form>
