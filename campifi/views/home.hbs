@@ -1,22 +1,27 @@
 <div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium">
   <button class="menu-icon" type="button" data-toggle></button>
-  <div class="title-bar-title">Menu</div>
+  <div class="title-bar-right"><a href="/home">Campifi</a>
+  </div>
 </div>
-  <div class="top-bar" data-topbar role="navigation" id="example-menu">
-    <ul class="menu align-center icon-top navIcon">
-      <li><a href="/home"><i class="fi-home navIcon"></i> <span>Home</span></a></li>
-      <li><a href="/site_add"><i class="fi-plus navIcon"></i> <span>Add Site</span></a></li>
-      <li><a href="/favorite"><i class="fi-star navIcon"></i> <span>Favorites</span></a></li>
-      <li><a href="/nearby"><i class="fi-marker navIcon"></i> <span>Nearby</span></a></li>
-      <li><a href="/logout"><i class="fi-x navIcon"></i> <span>Log Out</span></a></li>
+
+<div class="top-bar" id="example-menu">
+  <div class="top-bar-left">
+    <ul class="dropdown menu" data-dropdown-menu>
+      <li class="menu-text">Campifi</li>
+      <li><a href="/home"><i class="fi-home topNavIcon"></i> <span>Home</span></a></li>
+      <li><a href="/site_add"><i class="fi-plus topNavIcon"></i> <span>Add Site</span></a></li>
+      <li><a href="/favorite"><i class="fi-star topNavIcon"></i> <span>Favorites</span></a></li>
+      <li><a href="/nearby"><i class="fi-marker topNavIcon"></i> <span>Nearby</span></a></li>
+      <li><a href="/logout"><i class="fi-x topNavIcon"></i> <span>Log Out</span></a></li>
     </ul>
   </div>
+</div>
 
 <h1>Hi {{camper.username}}</h1>
 
 {{#each site}}
 <div class="center column row">
-  <a href="/campsite/{{this.id}}"><h3>{{name}}</h3></a>
+  <h3>{{name}}</h3>
   <img class="campsiteImage" src={{image}}>
   <p>{{description}}<p>
     <a href="/campsite/{{this.id}}"><button type="button" name="button"><h3>Campsite Details</h3></button></a>
