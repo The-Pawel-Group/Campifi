@@ -16,7 +16,7 @@ router.post('/', function(req, res, next){
       res.render('/', {error: "Please try again"});
     } else {
       db.addCamper(req.body).then(function(){
-        res.redirect('/');
+        res.redirect('/home');
       });
     }
   }).catch(function(err){

@@ -14,7 +14,7 @@ router.post('/', function(req, res, next) {
   db.findUserByUsername(req.body.username).then(function(camper) {
     console.log(camper);
     if(camper) {
-      res.redirect('/');
+      res.redirect('/home');
     }
     else {
       res.render('auth/login', {error: 'no username found'});
