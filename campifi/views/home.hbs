@@ -7,8 +7,9 @@
 
 
 {{#each site}}
-
-<a href="/campsite/{{this.id}}"><h3>{{name}}</h3></a>
-<img src={{image}}>
-<p>{{description}}<p>
+<div class="center column row">
+  <a href="/campsite/{{this.id}}"><h3>{{name}}</h3></a>
+  <img class="campsiteImage" src={{image}}>
+  <p>{{description}}<p>
+</div>
 {{/each}}
