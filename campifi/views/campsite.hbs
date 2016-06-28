@@ -1,0 +1,8 @@
+{{#each site}}
+<h3>{{name}}</h3>
+<img src={{image}}>
+<p>{{description}}</p>
+<a href="/campsite/edit/{{this.id}}">EDIT</a>
+<a href="/campsite/delete/{{this.id}}">DELETE</a>
+
+{{/each}}

@@ -72,3 +72,8 @@ button {
 a {
   color: #00B7FF;
 }
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}

@@ -1,5 +1,35 @@
 <div class="row">
-    <div class="small-6 small-centered columns">
-        <h1>Campifi Login</h1>
-    </div>
+  <div class="small-6 small-centered columns">
+    <h1 class='text-center'> Login Here! </h1>
+  </div>
 </div>
+
+{{error}}
+
+<form action="/login" method="post">
+  <div class="row">
+    <div class="medium-6 medium-centered columns">
+      <label for="username" class='text-center'> Username:
+        <input type="text" name="username" placeholder="username">
+      </label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="medium-6 medium-centered columns">
+      <label for="password" class='text-center'> Password:
+        <input type="password" name="password" placeholder="password">
+      </label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-6 large-6 small-centered large-centered text-center columns">
+      <button class='success button' type="submit">Submit</button>
+    </div>
+
+  </div>
+<div class="row">
+  <div class="small-6 large-6 small-centered large-centered text-center columns">
+    <a href="/"></a><button class='success button' type="link">Back</button></a>
+  </div>
+</div>
+</form>
