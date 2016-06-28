@@ -7,7 +7,7 @@ var session = require('cookie-session');
 var bodyParser = require('body-parser');
 var auth = require('./auth');
 
-
+//All the routes
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var signup = require('./routes/signup');
@@ -20,6 +20,9 @@ require('dotenv').config();
 
 var app = express();
 
+app.use(auth.passport.initialize());
+
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
@@ -30,6 +33,7 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(session({keys: [process.env.SESSION_KEY1, process.env.SESSION_KEY2]}))
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
