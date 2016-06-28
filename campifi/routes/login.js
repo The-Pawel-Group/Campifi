@@ -6,20 +6,24 @@ var auth = require('../auth');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('./auth/login');
+  if (req.session.camperId) {
+    res.redirect('/home');
+  } else {
+    next();
+  }
+}, function(req,res,next) {
+  res.render('/auth/login');
 });
 
 router.post('/', function(req, res, next) {
-  console.log(req.body.username);
-  db.findUserByUsername(req.body.username).then(function(camper) {
-    console.log(camper);
-    if(camper) {
-      res.redirect('/home');
-    }
-    else {
-      res.render('auth/login', {error: 'no username found'});
-    }
-  });
+  auth.passport.authenticate('local', function(err, camper, info) {
+    if (err) {
+    res.render('/auth/login', {error: err});
+  } else if (camper) {
+    req.session.camperId = camper.id;
+    res.redirect('/home');
+  }
+})(req, res, next);
 });
 
 module.exports = router;
