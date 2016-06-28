@@ -12,13 +12,13 @@ router.get('/', function(req, res, next) {
     next();
   }
 }, function(req,res,next) {
-  res.render('/auth/login');
+  res.render('./auth/login');
 });
 
 router.post('/', function(req, res, next) {
   auth.passport.authenticate('local', function(err, camper, info) {
     if (err) {
-      res.render('/auth/login', {error: err});
+      res.render('./auth/login', {error: err});
   } else if (camper) {
       req.session.camperId = camper.id;
       res.redirect('/home');
