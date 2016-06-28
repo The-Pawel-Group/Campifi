@@ -27,6 +27,8 @@ module.exports = {
   isLoggedIn: function(req, res, next) {
     if(req.session.camperId) {
       res.redirect('/home');
+    } else {
+      next();
     }
   }
 };
