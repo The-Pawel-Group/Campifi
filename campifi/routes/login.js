@@ -18,12 +18,12 @@ router.get('/', function(req, res, next) {
 router.post('/', function(req, res, next) {
   auth.passport.authenticate('local', function(err, camper, info) {
     if (err) {
-    res.render('/auth/login', {error: err});
+      res.render('/auth/login', {error: err});
   } else if (camper) {
-    req.session.camperId = camper.id;
-    res.redirect('/home');
-  }
-})(req, res, next);
+      req.session.camperId = camper.id;
+      res.redirect('/home');
+    }
+  })(req, res, next);
 });
 
 module.exports = router;
