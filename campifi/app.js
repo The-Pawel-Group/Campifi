@@ -10,7 +10,9 @@ var auth = require('./auth');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
-var sign_up = require('./routes/sign_up');
+var signup = require('./routes/signup');
+var login = require('./routes/login');
+
 require('dotenv').config();
 
 var app = express();
@@ -29,7 +31,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
-app.use('/sign_up', sign_up);
+app.use('/signup', signup);
+app.use('/login', login);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
