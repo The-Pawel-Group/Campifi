@@ -10,7 +10,6 @@ router.get('/', auth.isNotLoggedIn, function(req, res, next) {
   knex('camper').select()
 ])
   .then(function(data) {
-    console.log(data);
     res.render('home', {site: data[0], camper: data[1]});
   });
 });
