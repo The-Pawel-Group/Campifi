@@ -1,12 +1,13 @@
     <h3>{{site.name}}</h3>
     <img src= {{site.image}}>
     <p>{{site.description}}</p>
+    <h4> by {{site.username}}</h4><br>
     <a href="/campsite/edit/{{site.id}}">EDIT</a>
     <a href="/campsite/delete/{{site.id}}">DELETE</a>
 
 
 {{#each comment}}
-    <p>{{this.message}}</p>
+    <p>{{this.message}} - <i>{{this.username}}</i></p>
 {{/each}}
 
 <form class="" action="/campsite/comment/{{site.id}}" method="post">

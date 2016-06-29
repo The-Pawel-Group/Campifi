@@ -7,7 +7,7 @@ var auth = require('../auth');
 router.get('/', auth.isNotLoggedIn, function(req, res, next) {
   return Promise.all([
   knex('site').select(),
-  knex('camper').select()
+  knex('camper').select().where('id', req.session.camperId).first()
 ])
   .then(function(data) {
     res.render('home', {site: data[0], camper: data[1]});
