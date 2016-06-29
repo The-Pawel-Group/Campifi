@@ -25,9 +25,14 @@
     <img src= {{site.image}}>
     <p>{{site.description}}</p>
     <h4> by {{site.username}}</h4><br>
+    
+{{#if permission}}
     <a href="/campsite/edit/{{site.id}}">EDIT</a>
     <a href="/campsite/delete/{{site.id}}">DELETE</a>
     <a href="/favorite/{{site.id}}">FAVORITE</a>
+{{else}}
+    <a href="/favorite/{{site.id}}">FAVORITE</a>
+{{/if}}
 
 {{#each comment}}
     <p>{{this.message}} - <i>{{this.username}}</i></p>
