@@ -7,7 +7,7 @@ var auth = require('../auth');
 // Render sites //
 router.get('/:id', auth.isNotLoggedIn, function(req, res, next) {
     return Promise.all([
-        knex('camper').select('camper.username', 'site.name', 'site.image', 'site.longitude', 'site.latitude', 'site.description')
+        knex('camper').select('site.id', 'camper.username', 'site.name', 'site.image', 'site.longitude', 'site.latitude', 'site.description')
         .join('site', 'camper.id', 'site.camper_id').where('site.id', req.params.id).first(),
         knex('comment').select('comment.message', 'camper.username')
         .join('camper', 'camper.id', 'comment.camper_id')
