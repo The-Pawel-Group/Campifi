@@ -16,6 +16,7 @@ var home = require('./routes/home');
 var site_add = require('./routes/site_add');
 var campsite = require('./routes/campsite');
 var logout = require('./routes/logout');
+var favorite = require('./routes/favorite');
 
 require('dotenv').config();
 
@@ -45,6 +46,7 @@ app.use('/home', home);
 app.use('/site_add', site_add);
 app.use('/campsite', campsite);
 app.use('/logout', logout);
+app.use('/favorite', favorite);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

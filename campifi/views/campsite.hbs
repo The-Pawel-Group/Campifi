@@ -4,7 +4,7 @@
     <h4> by {{site.username}}</h4><br>
     <a href="/campsite/edit/{{site.id}}">EDIT</a>
     <a href="/campsite/delete/{{site.id}}">DELETE</a>
-
+    <a href="/favorite/{{site.id}}">FAVORITE</a>
 
 {{#each comment}}
     <p>{{this.message}} - <i>{{this.username}}</i></p>
