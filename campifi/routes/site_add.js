@@ -6,7 +6,7 @@ var auth = require('../auth');
 
 /* GET home page. */
 router.get('/', auth.isNotLoggedIn, function(req, res, next) {
-  res.render('site_add');
+  res.render('site_add', {id: req.session.camperId});
 });
 
 router.post('/', function(req, res, next) {

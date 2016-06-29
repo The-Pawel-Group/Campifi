@@ -13,7 +13,8 @@ router.get('/:id', auth.isNotLoggedIn, function(req, res, next) {
       console.log(data);
         res.render('campsite', {
             site: data[0],
-            comment: data[1]
+            comment: data[1],
+            id: req.session.camperId
         });
     });
 });
