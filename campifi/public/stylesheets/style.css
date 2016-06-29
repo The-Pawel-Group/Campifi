@@ -70,7 +70,7 @@ button {
 }
 
 a {
-  color: #00B7FF;
+  color: hsl(43,91%,96%);
 }
 
 .container {
@@ -147,6 +147,17 @@ a {
   font-size: 1.5rem;
   color: hsl(0,4%,13%);
 }
+.top-bar {
+ background-color: hsl(22,49%,43%);
+}
+ .top-bar-left {
+  background-color: hsl(22,49%,43%);
+ }
+
+ .top-bar-right {
+  background-color: hsl(22,49%,43%);
+ }
+
 .no-js .top-bar {
  display: none;
 }
@@ -169,7 +180,7 @@ a {
 
 /*                MEDIA QUERIES                */
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   body {
     background-image: url('http://cdn4.benzinga.com/files/imagecache/1024x768xUP/images/story/2012/shutterstock_132468212.jpg');
   }
