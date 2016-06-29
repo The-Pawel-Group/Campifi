@@ -7,10 +7,12 @@ var auth = require('../auth');
 // Render sites //
 router.get('/:id', auth.isNotLoggedIn, function(req, res, next) {
     return Promise.all([
-        knex('site').select().where('site.id', req.params.id).first(),
-        knex('comment').select().where('site_id', req.params.id)
+        knex('camper').select('camper.username', 'site.name', 'site.image', 'site.longitude', 'site.latitude', 'site.description')
+        .join('site', 'camper.id', 'site.camper_id').where('site.id', req.params.id).first(),
+        knex('comment').select('comment.message', 'camper.username')
+        .join('camper', 'camper.id', 'comment.camper_id')
+        .where('site_id', req.params.id)
     ]).then(function(data) {
-      console.log(data);
         res.render('campsite', {
             site: data[0],
             comment: data[1],
@@ -60,8 +62,5 @@ res.redirect('/campsite/' + req.params.id);
 next(error);
 });
 });
-
-
-
 
 module.exports = router;
