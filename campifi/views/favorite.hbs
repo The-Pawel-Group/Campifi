@@ -1,0 +1,16 @@
+<h1>My Favorite Campsites</h1>
+<ul>
+{{#each site}}
+  <li>
+    <h3>{{name}}</h3>
+    <img src="{{image}}" alt="camp" width="250px" height="250px" />
+    <p>{{description}} </p>
+    <p>
+      longitude: {{longitude}}
+    </p>
+    <p>
+      latitude: {{latitude}}
+    </p>
+  </li>
+  {{/each}}
+</ul>

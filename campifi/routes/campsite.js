@@ -55,12 +55,12 @@ router.post('/edit/:id', function(req, res, next) {
 router.post('/comment/:id', function(req, res, next) {
   console.log(req.params.id);
   console.log(req.body);
+  knex('comment').insert(req.body).then(function() {
+    res.redirect('/campsite/' + req.params.id);
+  }).catch(function(error) {
+    next(error);
+  });
+});
 
-knex('comment').insert(req.body).then(function() {
-res.redirect('/campsite/' + req.params.id);
-}).catch(function(error) {
-next(error);
-});
-});
 
 module.exports = router;
