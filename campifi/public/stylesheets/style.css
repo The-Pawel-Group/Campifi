@@ -1,5 +1,6 @@
 body {
   background-color: hsl(105,32%,53%);
+  height: auto;
 }
 /*lighter brown*/
 .maincolor {
@@ -149,6 +150,9 @@ a {
 }
 .top-bar {
  background-color: hsl(22,49%,43%);
+}
+.top-bar a {
+  color: hsl(0,4%,13%);
 }
  .top-bar-left {
   background-color: hsl(22,49%,43%);
