@@ -7,10 +7,10 @@ var map = require('../map');
 
 router.get('/', function(req, res , next) {
   res.render('nearby');
-  map.apiData().then(function(body){
-    res.render('nearby', {body: body})
-    console.log(body)
-  })
+  // map.apiData().then(function(body){
+  //   res.render('nearby', {body: body})
+  //   console.log(body)
+  // })
 });
 
 module.exports = router;
