@@ -31,11 +31,11 @@
 <div class="row">
     <div class="small-12 large-12 text-center columns">
         {{#if permission}}
-            <button type="button" name="edit"><a href="/campsite/edit/{{site.id}}">EDIT</a></button>
-            <button type="button" name="delete"><a href="/campsite/delete/{{site.id}}">DELETE</a></button>
-            <button type="button" name="favorite"><a href="/favorite/{{site.id}}">FAVORITE</a></button>
+            <button class="detailBtn2" type="button" name="edit"><a href="/campsite/edit/{{site.id}}">EDIT</a></button>
+            <button class="detailBtn2"  type="button" name="delete"><a href="/campsite/delete/{{site.id}}">DELETE</a></button>
+            <button class="detailBtn2"  type="button" name="favorite"><a href="/favorite/{{site.id}}">FAVORITE</a></button>
         {{else}}
-            <button type="button" name="favorite"><a href="/favorite/{{site.id}}">FAVORITE</a>
+            <button class="detailBtn2"  type="button" name="favorite"><a href="/favorite/{{site.id}}">FAVORITE</a>
         {{/if}}
     </div>
 
@@ -70,6 +70,7 @@
 <br>
 <br>
 <!-- // footer nav // -->
+<div id="footer">
 <nav class="top-bar show-for-small-only" data-topbar role="navigation">
     <ul class="menu align-center icon-top navIcon">
         <li><a href="/home"><i class="fi-trees navIcon"></i> <span>Home</span></a></li>
@@ -78,3 +79,4 @@
         <li><a href="/logout"><i class="fi-x navIcon"></i> <span>Log Out</span></a></li>
     </ul>
 </nav>
+</div>
