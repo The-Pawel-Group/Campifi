@@ -14,4 +14,14 @@ router.get('/', auth.isNotLoggedIn, function(req, res, next) {
   });
 });
 
+
+// router.get('', function(req, res, next){
+//   return Promise.all([
+//     knex('site').select(),
+//   ]).then( function(data){
+//     res.json(data)
+//     console.log(data)
+//   })
+// })
+
 module.exports = router;
