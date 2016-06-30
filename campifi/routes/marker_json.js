@@ -6,9 +6,11 @@ var auth = require('../auth');
 
 router.get('/', function(req, res, next){
   return Promise.all([
-    knex('site').select(),
-    knex('camper').select()
+  knex('site').select()
   ]).then( function(data){
-    res.JSON('marker_json',{})
+    data = data[0];
+    res.json(data)
   })
 })
+
+module.exports = router
