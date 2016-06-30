@@ -1,46 +1,54 @@
 <!-- start head nav  -->
 
 <div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium">
-  <button class="menu-icon" type="button" data-toggle></button>
-  <div class="title-bar-right"><a href="/home">Campifi</a>
-  </div>
+    <button class="menu-icon" type="button" data-toggle></button>
+    <div class="title-bar-right"><a href="/home">Campifi</a>
+    </div>
 </div>
 
 <div class="top-bar" id="example-menu">
-  <div class="top-bar-left">
-    <ul class="dropdown menu" data-dropdown-menu>
-      <li class="menu-text"><a href="/home">Campifi</a></li>
-      <li><a href="/home"><i class="fi-trees topNavIcon hide-for-small-only"></i> <span>Home</span></a></li>
-      <li><a href="/site_add"><i class="fi-plus topNavIcon hide-for-small-only"></i> <span>Add Site</span></a></li>
-      <li><a href="/favorite"><i class="fi-star topNavIcon hide-for-small-only"></i> <span>Favorites</span></a></li>
-      <li><a href="/logout"><i class="fi-x topNavIcon hide-for-small-only"></i> <span>Log Out</span></a></li>
-    </ul>
-  </div>
+    <div class="top-bar-left">
+        <ul class="dropdown menu" data-dropdown-menu>
+            <li class="menu-text"><a href="/home">Campifi</a></li>
+            <li><a href="/home"><i class="fi-trees topNavIcon hide-for-small-only"></i> <span>Home</span></a></li>
+            <li><a href="/site_add"><i class="fi-plus topNavIcon hide-for-small-only"></i> <span>Add Site</span></a></li>
+            <li><a href="/favorite"><i class="fi-star topNavIcon hide-for-small-only"></i> <span>Favorites</span></a></li>
+            <li><a href="/logout"><i class="fi-x topNavIcon hide-for-small-only"></i> <span>Log Out</span></a></li>
+        </ul>
+    </div>
 </div>
 <!-- end head nav  -->
+<div class="row">
 
+</div>
 <h1>My Favorite Campsites</h1>
 <ul>
-{{#each site}}
-  <li>
-    <h3>{{name}}</h3>
-    <img src="{{image}}" alt="camp" width="250px" height="250px" />
-    <p>{{description}} </p>
-    <p>
-      longitude: {{longitude}}
-    </p>
-    <p>
-      latitude: {{latitude}}
-    </p>
-  </li>
-  {{/each}}
+    {{#each site}}
+        <div class="row descBg">
+            <div class="small-12 large-12 text-center columns">
+
+                <li>
+                    <h3>{{name}}</h3>
+                    <img src="{{image}}" alt="camp" width="250px" height="250px" />
+                    <p>{{description}} </p>
+                    <p>
+                        longitude: {{longitude}}
+                    </p>
+                    <p>
+                        latitude: {{latitude}}
+                    </p>
+                </li>
+            </div>
+        </div>
+        <hr>
+    {{/each}}
 </ul>
 <!-- // footer nav // -->
 <nav class="top-bar show-for-small-only" data-topbar role="navigation">
-<ul class="menu align-center icon-top navIcon">
-  <li><a href="/home"><i class="fi-trees navIcon"></i> <span>Home</span></a></li>
-  <li><a href="/site_add"><i class="fi-plus navIcon"></i> <span>Add Site</span></a></li>
-  <li><a href="/favorite"><i class="fi-star navIcon"></i> <span>Favorites</span></a></li>
-  <li><a href="/logout"><i class="fi-x navIcon"></i> <span>Log Out</span></a></li>
-</ul>
+    <ul class="menu align-center icon-top navIcon">
+        <li><a href="/home"><i class="fi-trees navIcon"></i> <span>Home</span></a></li>
+        <li><a href="/site_add"><i class="fi-plus navIcon"></i> <span>Add Site</span></a></li>
+        <li><a href="/favorite"><i class="fi-star navIcon"></i> <span>Favorites</span></a></li>
+        <li><a href="/logout"><i class="fi-x navIcon"></i> <span>Log Out</span></a></li>
+    </ul>
 </nav>

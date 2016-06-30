@@ -24,12 +24,23 @@
 
 
 {{#each site}}
-<div class="center column row">
-  <h3>{{name}}</h3>
-  <img class="campsiteImage" src={{image}}>
-  <p>{{description}}<p>
-    <a href="/campsite/{{this.id}}"><button type="button" name="button"><h3>Campsite Details</h3></button></a>
+<div class="row">
+  <div class="large-6 columns">
+    <h3>{{name}}</h3>
+    <img class="campsiteImage" src={{image}}>
+  </div>
+  <div class="large-6 columns descBg">
+    <p>{{description}}<p>
+  </div>
 </div>
+<br>
+<div class="row">
+  <div class="small-12 detailBtn">
+      <a href="/campsite/{{this.id}}"><button class="detailBtn2" type="button" name="button"><h3>Campsite Details</h3></button></a>
+  </div>
+</div>
+<hr>
+
 {{/each}}
 
 <nav class="top-bar show-for-small-only" data-topbar role="navigation">
