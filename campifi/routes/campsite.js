@@ -13,7 +13,6 @@ router.get('/:id', auth.isNotLoggedIn, function(req, res, next) {
         .join('camper', 'camper.id', 'comment.camper_id')
         .where('site_id', req.params.id)
     ]).then(function(data) {
-      console.log(data[1])
       if (req.session.camperId === data[0].camper_id  || req.session.camperId === 4) {
         res.render('campsite', {
             site: data[0],
