@@ -18,13 +18,9 @@ var home = require('./routes/home');
 var site_add = require('./routes/site_add');
 var campsite = require('./routes/campsite');
 var logout = require('./routes/logout');
-<<<<<<< HEAD
 var favorite = require('./routes/favorite');
-
-=======
-var nearby = require('./routes/nearby');
 var marker_json = require('./routes/marker_json');
->>>>>>> featureBranch2
+
 
 require('dotenv').config();
 
