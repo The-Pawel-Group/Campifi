@@ -1,6 +1,6 @@
 /*Global*/
 body {
-  background-color: hsl(22,49%,43%);
+  background-color: #F1EDE5;
   height: auto;
 }
 /*lighter brown*/
@@ -60,12 +60,14 @@ ol {
 ul {
   padding-left: 20px;
 }
-
+.top-bar, .top-bar ul {
+    background-color: #CFDFFB;
+}
 button {
   padding: .5%;
   border-radius: 20%;
-  background-color: hsl(22,49%,43%);
-  color: hsl(105,32%,53%);
+  background-color: #4D5541;
+  color: #CFDFFB;
   font-weight: 900;
   font-family:'Roboto', serif;
   border: 1px solid hsl(19,100%,19%);
@@ -79,8 +81,8 @@ button {
   margin-top: 10vh;
   height: auto;
   border-radius: 6px;
-  box-shadow: 0px 0px 3px 3px #FCEBBF 10%;
-  background: -webkit-radial-gradient( circle, #FCEBBF 10%, #75AF63 80%);
+  box-shadow: 10px 10px 5px #3E1909;
+  background: -webkit-radial-gradient( circle, #FCEBBF 10%, #B3C596 80%);
 }
 
 .descBg p {
@@ -192,23 +194,27 @@ button {
 .top-bar {
  display: flex;
  justify-content: space-between;
+ background-color: #CFDFFB;
 }
+/*ul .dropdown .menu {
+background-color: #CFDFFB;
+}*/
 .top-bar a {
   color: hsl(0,4%,13%);
 }
  .top-bar-left {
-  background-color: hsl(22,49%,43%);
+  background-color: #CFDFFB;
  }
 
  .top-bar-right {
-  background-color: hsl(22,49%,43%);
+  background-color: #CFDFFB;
  }
 
 .no-js .top-bar {
  display: none;
 }
 /*/nav/*/
-@media screen and (min-width: 40em) {
+@media only screen and (min-width: 40.063em) {
  .no-js .top-bar {
    display: block;
  }
@@ -220,22 +226,47 @@ button {
  /*Map stuff*/
 
 #map {
-  width: 100%;
+  width: 90%;
   background-color: pink;
-  height: 20rem;
-
+  height: 30rem;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0 18px 116px -2px #3E1909;
+  margin-bottom: 10vh;
 }
 
 /*                MEDIA QUERIES                */
 
 
-@media (max-width: 600px) {
+@media only screen and (max-width: 40.063em) {
   .indexMediaQ {
     background-image: url('http://cdn4.benzinga.com/files/imagecache/1024x768xUP/images/story/2012/shutterstock_132468212.jpg');
     height: 100%;
   }
+  .top-bar-left {
+   display: flex;
+   justify-content: space-between;
+   height: 5vh;
+  }
+  .top-bar-right {
+   display: flex;
+   justify-content: space-between;
+   height: 5vh;
+  }
+  .top-bar-left a {
+   font-size: 2em;
+  }
   .campsiteImage {
-    width: 100%;
+    height: 40vh;
+    width: 80em;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+  }
+  .campsiteName {
+
+    display: flex;
+    justify-content: center;
   }
   .descBg {
     margin-top: 3vh;
@@ -263,5 +294,9 @@ button {
   .logSign {
     width: 25vw;
     font-size: 1rem;
+  }
+  .detailBtn2 {
+    border-radius: 6px;
+    width: 30vw;
   }
 }
