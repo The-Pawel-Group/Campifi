@@ -46,6 +46,10 @@ console.log(pos);
 
 
 $(document).ready(function(){
+  function hi(){
+    console.log('hi pawel!');
+  };
 initMap();
+hi();
 
 })
