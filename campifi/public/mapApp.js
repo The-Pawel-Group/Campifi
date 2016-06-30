@@ -1,3 +1,10 @@
+$(document).ready(function(){
+initMap();
+saySomething();
+
+});
+
+
 window.initMap = function() {
   var map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 39.7392 , lng: -104.9903},
@@ -37,11 +44,6 @@ console.log(pos);
                              'Error: Your browser doesn\'t support geolocation.');
      }
 
-
-
-
-$(document).ready(function(){
-initMap();
-
-
-})
+    saySomething = function(hi){
+      console.log(hi);
+    }
