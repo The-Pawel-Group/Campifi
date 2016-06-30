@@ -38,8 +38,6 @@ console.log(pos);
      }
 
 $(document).ready(function(){
-$.get('http://localhost:3000/marker_json', function(data) {
-  console.log(data);
-});
 initMap();
+
 });
