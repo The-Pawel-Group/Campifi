@@ -17,7 +17,8 @@ $.get('https://campifi.herokuapp.com/marker_json', function(data) {
                 lat: 39.7392,
                 lng: -104.9903
             },
-            zoom: 6
+            zoom: 6,
+            mapTypeId: google.maps.MapTypeId.TERRAIN
         });
         var infoWindow = new google.maps.InfoWindow({
             map: map
