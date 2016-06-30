@@ -18,8 +18,13 @@ var home = require('./routes/home');
 var site_add = require('./routes/site_add');
 var campsite = require('./routes/campsite');
 var logout = require('./routes/logout');
+<<<<<<< HEAD
 var favorite = require('./routes/favorite');
 
+=======
+var nearby = require('./routes/nearby');
+var marker_json = require('./routes/marker_json');
+>>>>>>> featureBranch2
 
 require('dotenv').config();
 
@@ -36,7 +41,7 @@ app.set('view engine', 'hbs');
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(session({keys: [process.env.SESSION_KEY1, process.env.SESSION_KEY2]}))
 app.use(express.static(path.join(__dirname, 'public')));
@@ -50,6 +55,8 @@ app.use('/site_add', site_add);
 app.use('/campsite', campsite);
 app.use('/logout', logout);
 app.use('/favorite', favorite);
+app.use('/marker_json', marker_json);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
