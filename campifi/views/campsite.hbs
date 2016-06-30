@@ -1,41 +1,53 @@
 <!-- start head nav  -->
 
 <div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium">
-  <button class="menu-icon" type="button" data-toggle></button>
-  <div class="title-bar-right"><a href="/home">Campifi</a>
-  </div>
+    <button class="menu-icon" type="button" data-toggle></button>
+    <div class="title-bar-right"><a href="/home">Campifi</a>
+    </div>
 </div>
 
 <div class="top-bar" id="example-menu">
-  <div class="top-bar-left">
-    <ul class="dropdown menu" data-dropdown-menu>
-      <li class="menu-text"><a href="/home">Campifi</a></li>
-      <li><a href="/home"><i class="fi-home topNavIcon"></i> <span>Home</span></a></li>
-      <li><a href="/site_add"><i class="fi-plus topNavIcon"></i> <span>Add Site</span></a></li>
-      <li><a href="/favorite"><i class="fi-star topNavIcon"></i> <span>Favorites</span></a></li>
-      <li><a href="/logout"><i class="fi-x topNavIcon"></i> <span>Log Out</span></a></li>
-    </ul>
-  </div>
+    <div class="top-bar-left">
+        <ul class="dropdown menu" data-dropdown-menu>
+            <li class="menu-text"><a href="/home">Campifi</a></li>
+            <li><a href="/home"><i class="fi-trees topNavIcon hide-for-small-only"></i> <span>Home</span></a></li>
+            <li><a href="/site_add"><i class="fi-plus topNavIcon hide-for-small-only"></i> <span>Add Site</span></a></li>
+            <li><a href="/favorite"><i class="fi-star topNavIcon hide-for-small-only"></i> <span>Favorites</span></a></li>
+            <li><a href="/logout"><i class="fi-x topNavIcon hide-for-small-only"></i> <span>Log Out</span></a></li>
+        </ul>
+    </div>
 </div>
 <!-- end head nav  -->
+<div class="row descBg">
+    <div class="small-12 large-12 text-center columns">
+        <h3>{{site.name}}</h3>
+        <img src= {{site.image}}>
+        <p>{{site.description}}</p>
+        <h4> Submitted by - {{site.username}}</h4>
 
-    <h3>{{site.name}}</h3>
-    <img src={{site.image}}>
-    <p>{{site.description}}</p>
-    <h4> by {{site.username}}</h4><br>
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="small-12 large-12 text-center columns">
+        {{#if permission}}
+            <button type="button" name="edit"><a href="/campsite/edit/{{site.id}}">EDIT</a></button>
+            <button type="button" name="delete"><a href="/campsite/delete/{{site.id}}">DELETE</a></button>
+            <button type="button" name="favorite"><a href="/favorite/{{site.id}}">FAVORITE</a></button>
+        {{else}}
+            <button type="button" name="favorite"><a href="/favorite/{{site.id}}">FAVORITE</a>
+        {{/if}}
+    </div>
 
-{{#if permission}}
-    <button type="button" name="edit"><a href="/campsite/edit/{{site.id}}">EDIT</a></button>
-    <button type="button" name="delete"><a href="/campsite/delete/{{site.id}}">DELETE</a></button>
-    <button type="button" name="favorite"><a href="/favorite/{{site.id}}">FAVORITE</a></button>
-{{else}}
-    <button type="button" name="favorite"><a href="/favorite/{{site.id}}">FAVORITE</a>
-{{/if}}
-
+</div>
 {{#each comment}}
-    <p>{{this.message}} - <i>{{this.username}}</i></p>
+    <div class="row ">
+        <hr>
+      <div class="small-12 large-12 text-center columns descBg">
+            <p>{{this.message}} - <i>{{this.username}}</i></p>
+        </div>
+    </div>
 {{/each}}
-
 <form class="" action="/campsite/comment/{{site.id}}" method="post">
     <div class="row">
         <div class="medium-6 medium-centered columns">
@@ -46,21 +58,23 @@
         </div>
     </div>
     <div class="row">
-        <div class="medium-6 medium-centered columns">
+        <div class="small-12 large-12 text-center columns">
             <input type="hidden" name="camper_id" placeholder="camper_id" value="{{id}}">
         </div>
-          <input type="hidden" name="site_id" value="{{site.id}}">
+        <input type="hidden" name="site_id" value="{{site.id}}">
     </div>
-    <div class="medium-6 text-center columns">
-      <button type="submit">Post Comment</button>
+    <div class="small-12 large-12 text-center columns">
+        <button class="detailBtn2" type="submit">Post Comment</button>
     </div>
 </form>
+<br>
+<br>
 <!-- // footer nav // -->
 <nav class="top-bar show-for-small-only" data-topbar role="navigation">
-<ul class="menu align-center icon-top navIcon">
-  <li><a href="/home"><i class="fi-home navIcon"></i> <span>Home</span></a></li>
-  <li><a href="/site_add"><i class="fi-plus navIcon"></i> <span>Add Site</span></a></li>
-  <li><a href="/favorite"><i class="fi-star navIcon"></i> <span>Favorites</span></a></li>
-  <li><a href="/logout"><i class="fi-x navIcon"></i> <span>Log Out</span></a></li>
-</ul>
+    <ul class="menu align-center icon-top navIcon">
+        <li><a href="/home"><i class="fi-trees navIcon"></i> <span>Home</span></a></li>
+        <li><a href="/site_add"><i class="fi-plus navIcon"></i> <span>Add Site</span></a></li>
+        <li><a href="/favorite"><i class="fi-star navIcon"></i> <span>Favorites</span></a></li>
+        <li><a href="/logout"><i class="fi-x navIcon"></i> <span>Log Out</span></a></li>
+    </ul>
 </nav>
