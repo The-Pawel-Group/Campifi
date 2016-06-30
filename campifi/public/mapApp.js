@@ -5,7 +5,7 @@ console.log(data);
 var campsitesCoordsArray = [];
 campsites = data;
 for (var i = 0; i < campsites.length; i++) {
-var campsiteCoords = [campsites[i].name, campsites[i].latitude, campsites[i].longitude]
+var campsiteCoords = [campsites[i].name, campsites[i].latitude, campsites[i].longitude];
 campsitesCoordsArray.push(campsiteCoords);
 }
 console.log(campsitesCoordsArray);
@@ -36,7 +36,7 @@ for (i = 0; i < markerArray.length; i++){
   position: new google.maps.LatLng( array[i][1], array[i][2]),
   map: map,
   title: 'Your location'
-})
+});
 }
 marker.setMap(map);
 
@@ -50,7 +50,7 @@ marker.setMap(map);
          // Browser doesn't support Geolocation
          handleLocationError(false, infoWindow, map.getCenter(), map.setMap());
        }
-     }
+     };
 
      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
        infoWindow.setPosition(pos);
@@ -60,4 +60,4 @@ marker.setMap(map);
      }
 
 
-})
+});
