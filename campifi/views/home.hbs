@@ -1,4 +1,7 @@
 <script type="text/javascript" src="/mapApp.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyALuntKFHrZW7rD2OBj1EJmGZOpziuzSZg&callback=initMap"
+async defer></script>
+
 
 <!-- start head nav  -->
 
@@ -27,11 +30,13 @@
 
 {{#each site}}
 <div class="row">
-  <div class="large-6 columns">
-    <h3>{{name}}</h3>
+  <div class="small-12 columns">
+    <h3 class="campsiteName"> {{name}}</h3>
     <img class="campsiteImage" src={{image}}>
   </div>
-  <div class="large-6 columns descBg">
+  </div>
+  <div class="row">
+  <div class="small-12 large-6 centered-columns descBg">
     <p>{{description}}<p>
   </div>
 </div>

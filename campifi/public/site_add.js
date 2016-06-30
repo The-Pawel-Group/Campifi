@@ -7,7 +7,6 @@
             },
             zoom: 8,
             mapTypeId: google.maps.MapTypeId.TERRAIN
-
         });
         var infoWindow = new google.maps.InfoWindow({
             map: map
