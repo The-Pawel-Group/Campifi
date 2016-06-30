@@ -10,36 +10,44 @@
   <div class="top-bar-left">
     <ul class="dropdown menu" data-dropdown-menu>
       <li class="menu-text"><a href="/home">Campifi</a></li>
-      <li><a href="/home"><i class="fi-home topNavIcon"></i> <span>Home</span></a></li>
-      <li><a href="/site_add"><i class="fi-plus topNavIcon"></i> <span>Add Site</span></a></li>
-      <li><a href="/favorite"><i class="fi-star topNavIcon"></i> <span>Favorites</span></a></li>
-      <li><a href="/logout"><i class="fi-x topNavIcon"></i> <span>Log Out</span></a></li>
+      <li><a href="/home"><i class="fi-trees topNavIcon hide-for-small-only"></i> <span>Home</span></a></li>
+      <li><a href="/site_add"><i class="fi-plus topNavIcon hide-for-small-only"></i> <span>Add Site</span></a></li>
+      <li><a href="/favorite"><i class="fi-star topNavIcon hide-for-small-only"></i> <span>Favorites</span></a></li>
+      <li><a href="/logout"><i class="fi-x topNavIcon hide-for-small-only"></i> <span>Log Out</span></a></li>
     </ul>
   </div>
 </div>
 <!-- end head nav  -->
 <h1>Hi {{camper.username}}</h1>
 
+    <div id="map" class=""></div>
 
 
 {{#each site}}
-<div class="center column row">
-  <h3>{{name}}</h3>
-  <img class="campsiteImage" src={{image}}>
-  <p>{{description}}<p>
-    <a href="/campsite/{{this.id}}"><button type="button" name="button"><h3>Campsite Details</h3></button></a>
+<div class="row">
+  <div class="large-6 columns">
+    <h3>{{name}}</h3>
+    <img class="campsiteImage" src={{image}}>
+  </div>
+  <div class="large-6 columns descBg">
+    <p>{{description}}<p>
+  </div>
 </div>
+<br>
+<div class="row">
+  <div class="small-12 detailBtn">
+      <a href="/campsite/{{this.id}}"><button class="detailBtn2" type="button" name="button"><h3>Campsite Details</h3></button></a>
+  </div>
+</div>
+<hr>
+
 {{/each}}
-<div id="map" class="">
-<div class="mapWrapper">
-    <div id="map" class=""></div>
-</div>
+
 <nav class="top-bar show-for-small-only" data-topbar role="navigation">
 <ul class="menu align-center icon-top navIcon">
-  <li><a href="/home"><i class="fi-home navIcon"></i> <span>Home</span></a></li>
+  <li><a href="/home"><i class="fi-trees navIcon"></i> <span>Home</span></a></li>
   <li><a href="/site_add"><i class="fi-plus navIcon"></i> <span>Add Site</span></a></li>
   <li><a href="/favorite"><i class="fi-star navIcon"></i> <span>Favorites</span></a></li>
-  <li><a href="/nearby"><i class="fi-marker navIcon"></i> <span>Nearby</span></a></li>
   <li><a href="/logout"><i class="fi-x navIcon"></i> <span>Log Out</span></a></li>
 </ul>
 </nav>
