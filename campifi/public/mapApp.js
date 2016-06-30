@@ -1,12 +1,6 @@
-<<<<<<< HEAD
+
 $.get('https://campifi.herokuapp.com/marker_json', function(data) {
-  //https://campifi.herokuapp.com/marker_json
-  // http://localhost:3000/marker_json
-=======
 
-$.get('https://campifi.herokuapp.com', function(data) {
-
->>>>>>> e91005c817eee3a55456fd212495cda2c06d6f9e
    console.log(data);
 }).then(function(data) {
    var campsitesCoordsArray = [];
