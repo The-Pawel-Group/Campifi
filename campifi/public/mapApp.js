@@ -1,5 +1,6 @@
-$.get('http://localhost:3000/marker_json', function(data) {
-  //https://campifi.herokuapp.com/marker_json
+
+$.get('https://campifi.herokuapp.com', function(data) {
+
    console.log(data);
 }).then(function(data) {
    var campsitesCoordsArray = [];
@@ -10,9 +11,9 @@ $.get('http://localhost:3000/marker_json', function(data) {
    }
    console.log(campsitesCoordsArray);
    return campsitesCoordsArray;
-}).then(function(array) {
+   }).then(function(array) {
 
-   window.initMap = function() {
+   window.onload = function() {
        var map = new google.maps.Map(document.getElementById('map'), {
            center: {
                lat: 39.7392,
@@ -31,7 +32,6 @@ $.get('http://localhost:3000/marker_json', function(data) {
                    lng: position.coords.longitude
                };
                console.log(pos);
-
                var marker;
                for (i = 0; i < array.length; i++) {
                    marker = new google.maps.Marker({
@@ -59,7 +59,5 @@ $.get('http://localhost:3000/marker_json', function(data) {
        infoWindow.setContent(browserHasGeolocation ?
            'Error: The Geolocation service failed.' :
            'Error: Your browser doesn\'t support geolocation.');
-   }
-
-
-});
+     }
+  });
