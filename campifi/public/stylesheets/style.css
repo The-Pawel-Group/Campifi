@@ -1,7 +1,5 @@
-/*Global*/
 body {
   background-color: hsl(105,32%,53%);
-  height: auto;
 }
 /*lighter brown*/
 .maincolor {
@@ -39,14 +37,6 @@ body {
   font-family: 'Boogaloo', sans-serif;
 }
 
-li {
-  list-style-type: none;
-}
-
-a {
-  color: hsl(43,91%,96%);
-}
-
 p, li {
   font-size: 1.1rem;
   font-family: 'Roboto', serif;
@@ -70,48 +60,24 @@ button {
   font-family:'Roboto', serif;
   border: 1px solid hsl(19,100%,19%);
 }
-/* End Global */
 
-
-/* Home Page*/
-.descBg {
-  margin-top: 10vh;
-  height: auto;
-  border-radius: 6px;
-  box-shadow: 0px 0px 3px 3px #FCEBBF 10%;
-  background: -webkit-radial-gradient( circle, #FCEBBF 10%, #75AF63 80%);
-}
-
-.descBg p {
-  font-size: 1.4rem;
-  font-family: 'Roboto', serif;
-}
-.detailBtn {
-  display: flex;
-  justify-content: center;
-}
-.detailBtn2 {
-  border-radius: 6px;
-  width: 20vw;
-}
-/* End Home Page*/
-
-
-/*            LANDING PAGE             */
 .landingTextBG {
-  /*width: 35rem;
-  height: auto;*/
+  width: 35rem;
+  height: auto;
 	border-radius: 6px;
   box-shadow: 0px 0px 3px 3px #FCEBBF 10%;
   background: -webkit-radial-gradient( circle, #FCEBBF 10%, #75AF63 80%);
-  display: flex;
-  justify-content: center;
+}
+
+a {
+  color: hsl(43,91%,96%);
 }
 
 .container {
   max-width: 600px;
   margin: 0 auto;
 }
+/*            LANDING PAGE             */
 
 .video iframe {
   position: absolute;
@@ -124,8 +90,6 @@ button {
   margin-top: -95vh;
   background: -webkit-radial-gradient( circle, #FCEBBF 10%, rgba(117, 175, 99, 0.7) 80%);
   border-radius: 6px;
-  display: flex;
-  justify-content: center;
 }
 .content1 h1 {
   color: hsl(19,100%,19%);
@@ -148,28 +112,23 @@ button {
   border-radius: 6px;
   font-family: 'Roboto', serif;
   font-size: 1.5rem;
-  background-color: hsl(105,32%,53%);
-  display: flex;
-  justify-content: center;
+
 }
 .log2 {
   margin-left: 8vw;
 }
-/*End Landing Page*/
 .button.success {
   color: hsl(19,100%,19%);
 }
 .campsiteImage {
  height: 40vh;
- width: 35vw;
- border-radius: 6px;
+ width: 100vw;
 }
 
 .center {
  display:flex;
  flex-wrap: wrap;
 }
-
 .topNavIcon {
   list-style-type: none;
   font-size: 1.5rem;
@@ -189,11 +148,7 @@ button {
   color: hsl(0,4%,13%);
 }
 .top-bar {
- display: flex;
- justify-content: space-between;
-}
-.top-bar a {
-  color: hsl(0,4%,13%);
+ background-color: hsl(22,49%,43%);
 }
  .top-bar-left {
   background-color: hsl(22,49%,43%);
@@ -206,7 +161,7 @@ button {
 .no-js .top-bar {
  display: none;
 }
-/*/nav/*/
+
 @media screen and (min-width: 40em) {
  .no-js .top-bar {
    display: block;
@@ -216,28 +171,18 @@ button {
    display: none;
  }
 }
- /*Map stuff*/
 
 #map {
   width: 100%;
-  background-color: pink;
-  height: 20rem;
-
+  height: 35rem;
+  background-color: grey;
 }
 
 /*                MEDIA QUERIES                */
 
-
 @media (max-width: 600px) {
-  .indexMediaQ {
+  body {
     background-image: url('http://cdn4.benzinga.com/files/imagecache/1024x768xUP/images/story/2012/shutterstock_132468212.jpg');
-    height: 100%;
-  }
-  .campsiteImage {
-    width: 100%;
-  }
-  .descBg {
-    margin-top: 3vh;
   }
   .content1 {
     margin-left: 20vw;

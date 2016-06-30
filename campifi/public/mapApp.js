@@ -37,11 +37,9 @@ console.log(pos);
                              'Error: Your browser doesn\'t support geolocation.');
      }
 
-
-
-
 $(document).ready(function(){
+$.get('http://localhost:3000/marker_json', function(data) {
+  console.log(data);
+});
 initMap();
-
-
-})
+});
