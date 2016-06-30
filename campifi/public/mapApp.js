@@ -1,7 +1,20 @@
+$.get('http://localhost:3000/marker_json', function(data) {
+console.log(data);
+}).then( function(data){
+var campsitesCoordsArray = [];
+campsites = data;
+for (var i = 0; i < campsites.length; i++) {
+var campsiteCoords = [campsites[i].name, campsites[i].latitude, campsites[i].longitude]
+campsitesCoordsArray.push(campsiteCoords);
+}
+console.log(campsitesCoordsArray);
+return campsitesCoordsArray;
+}).then( function(array){
+
 window.initMap = function() {
   var map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 39.7392 , lng: -104.9903},
-    zoom: 8
+    zoom: 2
   });
   var infoWindow = new google.maps.InfoWindow({map: map});
   if (navigator.geolocation) {
@@ -11,18 +24,26 @@ window.initMap = function() {
              lng: position.coords.longitude
            };
 console.log(pos);
-            var marker = new google.maps.Marker({
-              position: pos,
-              map: map,
-              title: 'Your location'
-            })
-            marker.setMap(map);
+var markerArray = [
+  ['aus', 25.2744, 133.7751],
+  ['aus', 26.3333, 132.3333],
+  ['aus', 24.9999, 135.7777]
+];
+var marker;
+for (i = 0; i < markerArray.length; i++){
+  marker = new google.maps.Marker({
+  position: new google.maps.LatLng( array[i][1], array[i][2]),
+  map: map,
+  title: 'Your location'
+})
+}
+marker.setMap(map);
 
            infoWindow.setPosition(pos);
            infoWindow.setContent('You are here!');
            map.setCenter(pos);
          }, function() {
-           handleLocationError(true, infoWindow, map.getCenter(), map.setMap());
+           handleLocationError(true, infoWindow, map.getCenter());
          });
        } else {
          // Browser doesn't support Geolocation
@@ -36,12 +57,6 @@ console.log(pos);
                              'Error: The Geolocation service failed.' :
                              'Error: Your browser doesn\'t support geolocation.');
      }
-
-
-
-
-$(document).ready(function(){
-initMap();
 
 
 })
