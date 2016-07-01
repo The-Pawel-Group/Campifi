@@ -39,6 +39,10 @@ body {
   font-family: 'Boogaloo', sans-serif;
 }
 
+.detail {
+  color: blue;
+}
+
 li {
   list-style-type: none;
 }
