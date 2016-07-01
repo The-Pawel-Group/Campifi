@@ -10,7 +10,7 @@ router.get('/', auth.isNotLoggedIn, function(req, res, next) {
   knex('camper').select().where('id', req.session.camperId).first()
 ])
   .then(function(data) {
-    res.render('home', {site: data[0], camper: data[1]});
+    res.render('home', {site: data[0], camper: data[1], key:process.env.GEOLOCATION_KEY});
   });
 });
 
