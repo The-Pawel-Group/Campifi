@@ -1,5 +1,5 @@
 
-$.get('http://localhost:3000/marker_json', function(data) {
+$.get('https://campifi.herokuapp.com/marker_json', function(data) {
 
    console.log(data);
 }).then(function(data) {
