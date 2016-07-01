@@ -39,6 +39,10 @@ body {
   font-family: 'Boogaloo', sans-serif;
 }
 
+.detail {
+  color: blue;
+}
+
 li {
   list-style-type: none;
 }
@@ -72,6 +76,10 @@ button {
   font-family:'Roboto', serif;
   border: 1px solid hsl(19,100%,19%);
 }
+.subBtn {
+  padding: 15px;
+  margin-bottom: 20px;
+}
 
 /* End Global */
 
@@ -83,6 +91,13 @@ button {
   border-radius: 6px;
   box-shadow: 10px 10px 5px #3E1909;
   background: -webkit-radial-gradient( circle, #FCEBBF 10%, #B3C596 80%);
+}
+.campsiteImage {
+ height: 40vh;
+ width: 95vw;
+ border-radius: 6px;
+ display: flex;
+ justify-content: center;
 }
 
 .descBg p {
@@ -162,12 +177,6 @@ button {
 .button.success {
   color: hsl(19,100%,19%);
 }
-.campsiteImage {
- height: 40vh;
- width: 35vw;
- border-radius: 6px;
-}
-
 .center {
  display:flex;
  flex-wrap: wrap;
@@ -196,9 +205,7 @@ button {
  justify-content: space-between;
  background-color: #CFDFFB;
 }
-/*ul .dropdown .menu {
-background-color: #CFDFFB;
-}*/
+
 .top-bar a {
   color: hsl(0,4%,13%);
 }
@@ -225,7 +232,16 @@ background-color: #CFDFFB;
 }
  /*Map stuff*/
 
-#map {
+/*#map {
+  width: 90%;
+  background-color: pink;
+  height: 30rem;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0 18px 116px -2px #3E1909;
+  margin-bottom: 10vh;
+}*/
+.mapHome {
   width: 90%;
   background-color: pink;
   height: 30rem;
@@ -234,14 +250,29 @@ background-color: #CFDFFB;
   box-shadow: 0 18px 116px -2px #3E1909;
   margin-bottom: 10vh;
 }
+.mapAdd {
+  height: 30rem;
+  width: 95vw;
+  max-width: 500px;
+  background-color: pink;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 0 18px 116px -2px #3E1909;
+  margin-bottom: 10vh;
+}
 
 /*                MEDIA QUERIES                */
 
 
-@media only screen and (max-width: 40.063em) {
+/*@media only screen and (max-width: 769x) {
   .indexMediaQ {
     background-image: url('http://cdn4.benzinga.com/files/imagecache/1024x768xUP/images/story/2012/shutterstock_132468212.jpg');
     height: 100%;
+  }
+  #map {
+    width: 95%;
+    height: 70rem;
   }
   .top-bar-left {
    display: flex;
@@ -257,14 +288,9 @@ background-color: #CFDFFB;
    font-size: 2em;
   }
   .campsiteImage {
-    height: 40vh;
-    width: 80em;
-    border-radius: 6px;
-    display: flex;
-    justify-content: center;
+    width: 95%;
   }
   .campsiteName {
-
     display: flex;
     justify-content: center;
   }
@@ -299,4 +325,4 @@ background-color: #CFDFFB;
     border-radius: 6px;
     width: 30vw;
   }
-}
+}*/

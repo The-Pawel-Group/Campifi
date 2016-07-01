@@ -23,23 +23,30 @@ async defer></script>
   </div>
 </div>
 <!-- end head nav  -->
-<h1>Hi {{camper.username}}</h1>
+<div class="row">
+  <h1 class="center">Hi {{camper.username}}</h1>
+</div>
 
-    <div id="map" class=""></div>
-
+  <div id="map" class="mapHome"></div>
 
 {{#each site}}
 <div class="row">
-  <div class="small-12 columns">
-    <h3 class="campsiteName"> {{name}}</h3>
-    <img class="campsiteImage" src={{image}}>
-  </div>
-  </div>
-  <div class="row">
-  <div class="small-12 large-6 centered-columns descBg">
-    <p>{{description}}<p>
+  <div class="small-12 medium-6 columns campsiteName">
+    <h3>{{name}}</h3>
   </div>
 </div>
+<div class="row">
+  <div class="small-12 medium-6 small-centered columns campsiteImage">
+    <img src={{image}}>
+  </div>
+</div>
+<div class="row">
+  <div class="large-6 small-centered columns descBg">
+    <p>{{description}}<p>
+    </div>
+</div>
+
+
 <br>
 <div class="row">
   <div class="small-12 detailBtn">
