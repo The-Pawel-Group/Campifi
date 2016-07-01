@@ -159,11 +159,12 @@ button {
 .content p {
   font-size: 2rem;
   font-family: 'Roboto', serif;
-  color: hsl(19,100%,19%);
+  color: hsl(43,91%,96%);
+  text-shadow: 2px 2px black;
 }
 .logSign {
   margin-top: 25vh;
-  width: 10vw;
+  width: 17vw;
   border-radius: 6px;
   font-family: 'Roboto', serif;
   font-size: 1.5rem;
