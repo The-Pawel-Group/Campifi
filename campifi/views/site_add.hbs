@@ -2,90 +2,99 @@
 <!-- start head nav  -->
 
 <div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium">
-  <button class="menu-icon" type="button" data-toggle></button>
-  <div class="title-bar-right"><a href="/home">Campifi</a>
-  </div>
+    <button class="menu-icon" type="button" data-toggle></button>
+    <div class="title-bar-right"><a href="/home">Campifi</a>
+    </div>
 </div>
 
 <div class="top-bar" id="example-menu">
-  <div class="top-bar-left">
-    <ul class="dropdown menu" data-dropdown-menu>
-      <li class="menu-text"><a href="/home">Campifi</a></li>
-      <li><a href="/home"><i class="fi-trees topNavIcon hide-for-small-only"></i> <span>Home</span></a></li>
-      <li><a href="/site_add"><i class="fi-plus topNavIcon hide-for-small-only"></i> <span>Add Site</span></a></li>
-      <li><a href="/favorite"><i class="fi-star topNavIcon hide-for-small-only"></i> <span>Favorites</span></a></li>
-      <li><a href="/logout"><i class="fi-x topNavIcon hide-for-small-only"></i> <span>Log Out</span></a></li>
-    </ul>
-  </div>
+    <div class="top-bar-left">
+        <ul class="dropdown menu" data-dropdown-menu>
+            <li class="menu-text"><a href="/home">Campifi</a></li>
+            <li><a href="/home"><i class="fi-trees topNavIcon hide-for-small-only"></i> <span>Home</span></a></li>
+            <li><a href="/site_add"><i class="fi-plus topNavIcon hide-for-small-only"></i> <span>Add Site</span></a></li>
+            <li><a href="/favorite"><i class="fi-star topNavIcon hide-for-small-only"></i> <span>Favorites</span></a></li>
+            <li><a href="/logout"><i class="fi-x topNavIcon hide-for-small-only"></i> <span>Log Out</span></a></li>
+        </ul>
+    </div>
 </div>
 <!-- end head nav  -->
 
 <div class="row">
-  <div class="small-6 small-centered columns">
-    <h1 class='text-center'> Add a CampSite </h1>
-  </div>
+    <div class="small-6 small-centered columns">
+        <h1 class='text-center'> Add a CampSite </h1>
+    </div>
+    <div>
+      <p>
+        You can drag and drop the marker below or click on the map at your <br>
+        location to store the longitude and latitude of your Campsite.
+      </p>
+    </div>
 </div>
 <br>
 
-<div id="map" class=""></div>
+<div class="row">
+    <div id="map" class="small-12 medium-6 columns mapAdd"></div>
+    <div class="small-12 medium-6 columns">
+        <form action="/site_add" method="post">
+            <div class="row">
+                <div class="medium-6 medium-centered columns">
+                    <label for="name"> Campsite Name:
+                        <input type="text" name="name" placeholder="campsite" required>
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="medium-6 medium-centered columns">
+                    <label for="image"> Image URL:
+                        <input type="url" name="image" placeholder="image URL" required>
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="medium-6 medium-centered columns">
+                    <label for="longitude"> Longitude:
+                        <input class="longitude" type="number" step="any" name="longitude" placeholder="longitude" required>
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="medium-6 medium-centered columns">
+                    <label for="latitude"> Latitude:
+                        <input class="latitude" type="number" step="any" name="latitude" placeholder="latitude" required>
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="medium-6 medium-centered columns">
+                    <label for="description"> Description:
+                        <textarea cols="5" name="description" placeholder="describe the campsite" required></textarea>
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="medium-6 medium-centered columns">
+                    <input type="hidden" name="camper_id" value='{{id}}'>
+                </div>
+            </div>
 
-<br>
-<form action="/site_add" method="post">
-  <div class="row">
-    <div class="medium-6 medium-centered columns">
-      <label for="name" class='text-center'> Campsite Name:
-        <input type="text" name="name" placeholder="campsite" required>
-      </label>
+            <div class="row">
+                <div class="small-6 large-6 small-centered large-centered columns">
+                    <button class='subBtn' type="submit">Submit</button>
+                </div>
+            </div>
+        </form>
     </div>
-  </div>
-  <div class="row">
-    <div class="medium-6 medium-centered columns">
-      <label for="image" class='text-center'> Image URL:
-        <input type="url" name="image" placeholder="image URL" required>
-      </label>
-    </div>
-  </div>
-  <div class="row">
-    <div class="medium-6 medium-centered columns">
-      <label for="longitude" class='text-center'> Longitude:
-        <input class="longitude" type="number" step="any" name="longitude" placeholder="longitude" required>
-      </label>
-    </div>
-  </div>
-  <div class="row">
-    <div class="medium-6 medium-centered columns">
-      <label for="latitude" class='text-center'> Latitude:
-        <input class="latitude" type="number" step="any" name="latitude" placeholder="latitude" required>
-      </label>
-    </div>
-  </div>
-  <div class="row">
-    <div class="medium-6 medium-centered columns">
-      <label for="description" class='text-center'> Description:
-        <textarea cols="5" name="description" placeholder="describe the campsite" required></textarea>
-      </label>
-    </div>
-  </div>
-  <div class="row">
-    <div class="medium-6 medium-centered columns">
-      <input type="hidden" name="camper_id" value='{{id}}'>
-    </div>
-  </div>
+</div>
 
-  <div class="row">
-    <div class="small-6 large-6 small-centered large-centered text-center columns">
-      <button class='success button' type="submit">Submit</button>
-    </div>
-  </div>
-</form>
+
 
 
 <!-- bottom nav -->
 <nav class="top-bar show-for-small-only" data-topbar role="navigation">
-<ul class="menu align-center icon-top navIcon">
-  <li><a href="/home"><i class="fi-trees navIcon"></i> <span>Home</span></a></li>
-  <li><a href="/logout" ><i class="fi-x navIcon"></i>Log Out</a></li>
-</ul>
+    <ul class="menu align-center icon-top navIcon">
+        <li><a href="/home"><i class="fi-trees navIcon"></i> <span>Home</span></a></li>
+        <li><a href="/logout"><i class="fi-x navIcon"></i>Log Out</a></li>
+    </ul>
 </nav>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyALuntKFHrZW7rD2OBj1EJmGZOpziuzSZg&callback=initMap"
-async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyALuntKFHrZW7rD2OBj1EJmGZOpziuzSZg&callback=initMap" async defer></script>
