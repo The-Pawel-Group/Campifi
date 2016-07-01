@@ -3,6 +3,7 @@ var router = express.Router();
 var knex = require('../db/knex');
 var db = require('../db/api');
 var auth = require('../auth');
+require('dotenv').config();
 
 /* GET home page. */
 router.get('/', auth.isNotLoggedIn, function(req, res, next) {
