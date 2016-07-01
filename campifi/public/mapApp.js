@@ -35,7 +35,7 @@ console.log(array);
                var marker;
                var number;
                for (i = 0; i < array.length; i++) {
-                 var siteInfo = '<h5>'+ array[i][0] +'</h5>' + '<h6>' + '<a href="http://localhost:3000/campsite/'+ array[i][3] +'" class="detail">'+ 'Campsite Details' + '</a></h6>';
+                 var siteInfo = '<h5>'+ array[i][0] +'</h5>' + '<h6>' + '<a href="https://campifi.herokuapp.com//campsite/'+ array[i][3] +'" class="detail">'+ 'Campsite Details' + '</a></h6>';
 
                    marker = new google.maps.Marker({
                        position: new google.maps.LatLng(array[i][1], array[i][2]),
