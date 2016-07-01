@@ -116,14 +116,31 @@ button {
 
 
 /*            LANDING PAGE             */
+.landingPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  flex-direction: column;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+
+}
+
+.landingButton {
+  display: flex;
+  flex-direction: row;
+}
+
 .landingTextBG {
   /*width: 35rem;
   height: auto;*/
 	border-radius: 6px;
   box-shadow: 0px 0px 3px 3px #FCEBBF 10%;
   /*background: -webkit-radial-gradient( circle, #FCEBBF 10%, #75AF63 80%);*/
-  display: flex;
-  justify-content: center;
+  /*display: flex;
+  justify-content: center;*/
 }
 
 .container {
@@ -132,45 +149,69 @@ button {
 }
 
 .video iframe {
-  position: absolute;
-  height: 40vh; !important
+  z-index: -1;
+  position: fixed;
+  /*height: 40vh; !important*/
+  min-width: 500px;
+  min-height: 500px;
 }
+
+video#bgvid {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url(polina.jpg) no-repeat;
+    background-size: cover;
+}
+
+
 .content1 {
-  position: absolute;
+  /*position: absolute;
+  z-index: 2;*/
   width: 60%;
-  margin-left: 20vw;
-  margin-top: -95vh;
+  /*margin-left: 20vw;*/
+  /*margin-top: -95vh;*/
   /*background: -webkit-radial-gradient( circle, #FCEBBF 10%, rgba(117, 175, 99, 0.7) 80%);*/
   border-radius: 6px;
-  display: flex;
-  justify-content: center;
+  /*display: flex;
+  justify-content: center;*/
 }
-.content1 h1 {
+.content1 {
   color: hsl(43,91%,96%);
   text-shadow: 2px 2px black;
-  font-size: 10rem;
+  font-size: 6rem;
 }
 
 .content {
-  position: absolute;
-  margin-left: 30vw;
-  margin-top: -60vh;
+  /*position: absolute;*/
+  /*margin-left: 30vw;*/
+  /*margin-top: -60vh;*/
 }
-.content p {
+.content {
   font-size: 2rem;
   font-family: 'Roboto', serif;
   color: hsl(43,91%,96%);
   text-shadow: 2px 2px black;
+  margin: 5%;
 }
 .logSign {
-  margin-top: 25vh;
+  /*margin-top: -25vh;*/
   width: 17vw;
   border-radius: 6px;
   font-family: 'Roboto', serif;
   font-size: 1.5rem;
   background-color: hsl(105,32%,53%);
-  display: flex;
-  justify-content: center;
+  /*display: flex;
+  justify-content: center;*/
 }
 .log2 {
   margin-left: 8vw;
@@ -262,16 +303,53 @@ button {
   border-radius: 10px;
   box-shadow: 0 18px 116px -2px #3E1909;
   margin-bottom: 10vh;
+  margin-left: 2vw;
 }
 
 /*                MEDIA QUERIES                */
 
 
-/*@media only screen and (max-width: 769x) {
-  .indexMediaQ {
+
+.indexBackgroundImage {
     background-image: url('http://cdn4.benzinga.com/files/imagecache/1024x768xUP/images/story/2012/shutterstock_132468212.jpg');
     height: 100%;
   }
+
+  @media only screen and (max-width: 769x) {
+    .content p {
+      font-size: 1rem;
+      padding-top: 2vh;
+    }
+
+    .detailBtn2 {
+      border-radius: 6px;
+      width: 30vw;
+    }
+
+    .content1 h1 {
+      font-size: 2rem;
+    }
+
+    .h3, h3 {
+      font-size: 1rem;
+    }
+
+    .top-bar-left {
+     display: flex;
+     justify-content: space-between;
+     height: 5vh;
+    }
+    .top-bar-right {
+     display: flex;
+     justify-content: space-between;
+     height: 5vh;
+    }
+    .top-bar-left a {
+     font-size: 2em;
+    }
+
+  }
+  /*
   #map {
     width: 95%;
     height: 70rem;
@@ -316,9 +394,7 @@ button {
     font-size: 1rem;
     padding-top: 2vh;
   }
-  iframe {
-    display: none;
-  }
+
   .logSign {
     width: 25vw;
     font-size: 1rem;
