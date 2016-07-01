@@ -1,18 +1,18 @@
 
-$.get('https://campifi.herokuapp.com/marker_json', function(data) {
+$.get('http://localhost:3000/marker_json', function(data) {
 
    console.log(data);
 }).then(function(data) {
    var campsitesCoordsArray = [];
    campsites = data;
    for (var i = 0; i < campsites.length; i++) {
-       var campsiteCoords = [campsites[i].name, campsites[i].latitude, campsites[i].longitude];
+       var campsiteCoords = [campsites[i].name, campsites[i].latitude, campsites[i].longitude, campsites[i].id];
        campsitesCoordsArray.push(campsiteCoords);
    }
    console.log(campsitesCoordsArray);
    return campsitesCoordsArray;
    }).then(function(array) {
-
+console.log(array);
    window.onload = function() {
        var map = new google.maps.Map(document.getElementById('map'), {
            center: {
@@ -33,11 +33,19 @@ $.get('https://campifi.herokuapp.com/marker_json', function(data) {
                };
                console.log(pos);
                var marker;
+               var number;
                for (i = 0; i < array.length; i++) {
+                 var siteInfo = '<h5>'+ array[i][0] +'</h5>' + '<h6>' + '<a href="http://localhost:3000/campsite/'+ array[i][3] +'" class="detail">'+ 'Campsite Details' + '</a></h6>';
+
                    marker = new google.maps.Marker({
                        position: new google.maps.LatLng(array[i][1], array[i][2]),
                        map: map,
-                       title: array[i][0]
+                       title: siteInfo
+                   });
+                   console.log(marker);
+                   google.maps.event.addListener(marker, 'click', function(){
+                     infoWindow.setContent(this.title);
+                     infoWindow.open(map, this);
                    });
                }
                marker.setMap(map);
