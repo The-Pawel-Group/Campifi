@@ -1,7 +1,7 @@
 /*Global*/
 body {
   background-color: #F1EDE5;
-  height: auto;
+  height: 100vh;
 }
 /*lighter brown*/
 .maincolor {
@@ -110,7 +110,7 @@ button {
   height: auto;*/
 	border-radius: 6px;
   box-shadow: 0px 0px 3px 3px #FCEBBF 10%;
-  background: -webkit-radial-gradient( circle, #FCEBBF 10%, #75AF63 80%);
+  /*background: -webkit-radial-gradient( circle, #FCEBBF 10%, #75AF63 80%);*/
   display: flex;
   justify-content: center;
 }
@@ -129,13 +129,14 @@ button {
   width: 60%;
   margin-left: 20vw;
   margin-top: -95vh;
-  background: -webkit-radial-gradient( circle, #FCEBBF 10%, rgba(117, 175, 99, 0.7) 80%);
+  /*background: -webkit-radial-gradient( circle, #FCEBBF 10%, rgba(117, 175, 99, 0.7) 80%);*/
   border-radius: 6px;
   display: flex;
   justify-content: center;
 }
 .content1 h1 {
-  color: hsl(19,100%,19%);
+  color: hsl(43,91%,96%);
+  text-shadow: 2px 2px black;
   font-size: 10rem;
 }
 
