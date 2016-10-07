@@ -1,0 +1,36 @@
+
+
+<div class="row">
+  <div class="small-6 small-centered columns">
+    <h1 class='text-center'>Join Us!</h1>
+  </div>
+</div>
+
+<form action="/signup" method="post">
+  <div class="row">
+    <div class="medium-6 medium-centered columns">
+      <label for="username" class='text-center'> Username:
+        <input type="text" name="username" placeholder="username">
+      </label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="medium-6 medium-centered columns">
+      <label for="password" class='text-center'> Password:
+        <input type="password" name="password" placeholder="password">
+      </label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-6 large-6 small-centered large-centered text-center columns">
+      <button class='detailBtn2 subBtn' type="submit">Submit</button>
+    </div>
+</div>
+</form>
+
+<div class="row">
+  <div class="small-6 large-6 small-centered large-centered text-center columns">
+    <a href="/"><button class='detailBtn2 subBtn' type="link">Back</button></a>
+  </div>
+</div>
+<h2>{{error}}</h2>
